@@ -7,6 +7,9 @@ import ConfirmForm from './components/auth/ConfirmForm';
 import PrivateRoute from './components/route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import NotFound from './components/layout/NotFound';
+import Test from './components/dashboard/Test'
+import Form from './components/dashboard/Form'
+import Form2 from './components/form/Form'
 
 function App() {
   return (
@@ -15,6 +18,15 @@ function App() {
         <Switch>
           <PrivateRoute exact path="/">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/test">
+            <Test />
+          </PrivateRoute>
+          <PrivateRoute path="/form2">
+            <Form2 />
+          </PrivateRoute>
+          <PrivateRoute path="/form">
+            <Form />
           </PrivateRoute>
           <Route path="/login">
             <LoginForm />

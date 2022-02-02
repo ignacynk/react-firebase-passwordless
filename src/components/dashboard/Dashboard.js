@@ -13,9 +13,9 @@ const Dashboard = () => {
       p={6}
     >
       <Heading as="h1" mb={6}>
-        Dashboard
+        Panel uzytkownika
       </Heading>
-      <Text fontSize="lg">Welcome, {user.email}!</Text>
+      <Text fontSize="lg">Witaj, {user.email}!</Text>
     </GridItem>
   );
 };
