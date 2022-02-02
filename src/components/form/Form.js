@@ -2,10 +2,10 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { GridItem, Button } from '@chakra-ui/react'
 // import { ArrowForwardIcon } from '@chakra-ui/icons'
-import Wiek from "./components/Wiek";
-import Dolegliwosc from './components/Dolegliwosc'
-import Historia from "./components/Historia";
-import Opis from "./components/Opis";
+import Wiek from "./Wiek";
+import Dolegliwosc from './Dolegliwosc'
+import Historia from "./Historia";
+import Opis from "./Opis";
 
 export default function Form2() {
   const {
