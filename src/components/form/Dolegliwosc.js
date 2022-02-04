@@ -21,7 +21,6 @@ export default function Dolegliwosc({ register }) {
     setCounter((prevCounter) => prevCounter - 1);
   };
 
-
   // // DOLEGLIWOSC PRZEWLEKA
 
   const [indexes2, setIndexes2] = React.useState([]);
@@ -38,6 +37,7 @@ export default function Dolegliwosc({ register }) {
     ]);
     setCounter2((prevCounter) => prevCounter - 1);
   };
+
 
 
   return (<>
@@ -61,7 +61,6 @@ export default function Dolegliwosc({ register }) {
               <Input
                 type="text"
                 name={`dolegliwosciAktualna[0]`}
-                // onChange={setChoroby}
                 ref={register}
               />
           </InputGroup>
@@ -73,7 +72,7 @@ export default function Dolegliwosc({ register }) {
               <Input
                 type="text"
                 name={`${fieldName}`}
-                ref={register}
+                ref={register}       
               />
             <InputRightElement width='4.5rem'>
             <Button type="button" h='1.75rem' r='1.75rem' size='sm' onClick={removeDolegliwoscAktualna(index)}>
@@ -105,7 +104,7 @@ export default function Dolegliwosc({ register }) {
                 {index}:
               <Input
                 type="text"
-                name={`${fieldName}`}
+                name={`${fieldName}.d${index}`}
                 ref={register}
               />
             <InputRightElement width='4.5rem'>
