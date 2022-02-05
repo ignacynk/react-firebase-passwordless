@@ -13,12 +13,14 @@ export const TableTest = ({ data, register, path }) => {
 
   const pathName = path[0]
   const pathHeaderTitle = path[3]
-
+  setInterval(() => {
+    
+  }, 1000);
   return (
     <>
     {<FormLabel mt={6} mb={6} htmlFor="table-test" textAlign='center'>{pathHeaderTitle}</FormLabel>}
     {data &&
-        data.flatMap(({ problem }, i) => (
+        data.flatMap(({ problem }, i) => ( 
         <Box p={5} shadow='sm' borderWidth='1px' minWidth='50vw' mb={6} borderRadius='lg'>
             <Stack spacing={8} >
                 <FormLabel>{pathHeaderTitle}</FormLabel>

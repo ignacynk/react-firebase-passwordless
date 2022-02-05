@@ -27,7 +27,6 @@ export const Problems = ({ formProps, path } ) => {
         <FormLabel mt={6}>{pathTitle}</FormLabel>  
         {fields.flatMap((field, fieldIndex) => (
           <InputGroup key={field.id} mt={4}>
-          {console.log(field)}
             <Input
               type="text"
               ref={register({require: true})}
