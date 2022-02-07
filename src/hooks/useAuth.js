@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
     return firebase
       .auth()
       .sendSignInLinkToEmail(email, {
-        url: 'https://medsi-testform.netlify.app/confirm',
+        url: 'https://elegant-curie-8d490a.netlify.app/confirm',
         handleCodeInApp: true,
       })
       .then(() => {
