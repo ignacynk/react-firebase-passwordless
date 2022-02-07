@@ -1,23 +1,24 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { GridItem, Button } from '@chakra-ui/react'
-// import { ArrowForwardIcon } from '@chakra-ui/icons'
-import Age from "./Age";
-// import Dolegliwosc from './Dolegliwosc'
-import Historia from "./Historia";
+import { 
+  GridItem, 
+  Button,
+  Heading,
+  Divider
+} from '@chakra-ui/react'
+
+import { Age } from "./Age";
 import { Problems } from "./Problems";
-import { pathing } from "./pathNames";
+import { Historia } from "./Historia";
 import { TableTest } from "./TableTest";
 
+import { pathing } from "./pathNames";
 export default function Form() {
   const { control, register, handleSubmit, watch, getValues, formState: { isSubmitting } } = useForm({
     mode: 'onChange',
   });
 
-  // https://react-hook-form.com/api/useform/watch
   const formData = watch();
-  // const formData1 = getValues()
-  // console.log(formData1)
 
   function onSubmit(values) {
     return new Promise((resolve) => {
@@ -27,8 +28,7 @@ export default function Form() {
       }, 3000);
     });
   }
-// console.log(formData.tests)
-// console.log(pathing)
+
   return (
     <GridItem
     colStart={[1, null, null, 2, null, null]}
@@ -36,14 +36,22 @@ export default function Form() {
     p={6}>
     <form onSubmit={handleSubmit(onSubmit)}>
       <Age register={register} />
-      <Historia register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <Heading textAlign='center' as="h1" mt={6} mb={12}>Dolegliwości</Heading>
       <Problems formProps={{ control, register }} path={pathing.main} data={formData}/>
       <Problems formProps={{ control, register }} path={pathing.actual}/>
       <Problems formProps={{ control, register }} path={pathing.chronic}/>
+      <Divider mt={12} mb={12}/>
+      
+      <Historia register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <Heading textAlign='center' as="h1" mt={6} mb={12}>Opisy dolegliwości</Heading>
       <TableTest data={formData.mainProblems} register={register} path={pathing.main}/>
       <TableTest data={formData.actualProblems} register={register} path={pathing.actual}/>
       <TableTest data={formData.chronicProblems} register={register} path={pathing.chronic}/>
-      {/* {console.log(register)} */}
+      
       <Button
           mt={4}
           colorScheme="teal"

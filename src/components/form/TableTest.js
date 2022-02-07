@@ -18,7 +18,9 @@ export const TableTest = ({ data, register, path }) => {
   }, 1000);
   return (
     <>
-    {<FormLabel mt={6} mb={6} htmlFor="table-test" textAlign='center'>{pathHeaderTitle}</FormLabel>}
+    <FormLabel mt={6} mb={6} htmlFor="table-test" textAlign='center'> 
+        {pathHeaderTitle}
+    </FormLabel>
     {data &&
         data.map(({ problem, key }, i) => ( 
         <Box p={5} shadow='sm' borderWidth='1px' minWidth='50vw' mb={6} borderRadius='lg'>
@@ -26,7 +28,8 @@ export const TableTest = ({ data, register, path }) => {
                 <FormLabel>{pathHeaderTitle}</FormLabel>
                 <Heading as="h1" mb={6}>
                     {problem}
-                </Heading>   
+                </Heading>
+                  
                 <Input style={{display: 'none'}} 
                     name={problem===undefined 
                     ? `trash.${pathName}Problem[${i}].problem` 

@@ -3,19 +3,19 @@ const pathing = {
         'main',                             // name of the path
         'Główna aktualna dolegliwość',      // header in Problems
         'Wpisz objaw główny',               // text in placeholder
-        'Dolegliwość główna',               // header in table component
+        'Dolegliwości główne',               // header in table component
     ],
     actual: [
         'actual',
         'Pozostałe aktualne dolegliwości',
         'Wpisz aktualne dolegliwości',
-        'Dolegliwość aktualna'
+        'Dolegliwości aktualne'
     ],
     chronic: [
         'chronic',
         'Pozostałe przewlekłe/towarzyszące dolegliwośc',
         'Wpisz przewlekłe/towarzyszące dolegliwośc',
-        'Dolegliwość przewlekła/towarzysząca '
+        'Dolegliwości przewlekłe/towarzyszące '
     ]
 }
 

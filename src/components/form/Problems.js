@@ -1,4 +1,6 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 import { useFieldArray } from 'react-hook-form';
 import {
   Input,
@@ -6,9 +8,7 @@ import {
   InputGroup,
   InputRightElement,
   FormLabel,
-
 } from '@chakra-ui/react';
-import { v4 as uuidv4 } from 'uuid';
 
 export const Problems = ({ formProps, path } ) => {
   const { control, register } = formProps;
@@ -25,11 +25,11 @@ export const Problems = ({ formProps, path } ) => {
   
   const appendField = () => append({ [pathNameProblems]: '', id: uuidv4() });
   return (
-        <>
-        <FormLabel mt={6}>{pathTitle}</FormLabel>  
+<>
+        <FormLabel mt={6}>{pathTitle}</FormLabel> 
+        {console.log(fields.length)}
         {fields.map((field, fieldIndex) => (
-          <InputGroup key={field.id} mt={4}>
-                
+          <InputGroup key={field.id} mt={4}>     
             <Input
               type="text"
               ref={register({require: true})}
@@ -37,14 +37,6 @@ export const Problems = ({ formProps, path } ) => {
               
               placeholder={pathPlaceholder}
             />
-            {/* <Input
-              type="text"
-              ref={register({require: true})}
-              name={`${pathNameProblems}[${fieldIndex}].id`}
-              value={uuidv4()}
-              placeholder={pathPlaceholder}
-              style={{display: 'none'}}
-            /> */}
             <InputRightElement width="4.5rem">
               <Button
                 type="button"
@@ -60,9 +52,9 @@ export const Problems = ({ formProps, path } ) => {
             </InputRightElement>
           </InputGroup>
         ))}
-          <Button type="button" mt={6} onClick={appendField}>
-            Dodaj objaw
-          </Button>
+        <Button type="button" mt={6} onClick={appendField}>
+          Dodaj objaw
+        </Button>
 </>
   );
 };
