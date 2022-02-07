@@ -34,12 +34,18 @@ const Nav = () => {
             </Box>
           </>
         )}
-        {!user && (
+        {!user && (<>
           <Link to="/login">
             <Text fontSize="md" mr={8}>
               Login
             </Text>
           </Link>
+          <Link to="/confirm">
+            <Text fontSize="md" mr={8}>
+              Confirm
+            </Text>
+          </Link>
+          </>
         )}
       </Flex>
     </GridItem>
