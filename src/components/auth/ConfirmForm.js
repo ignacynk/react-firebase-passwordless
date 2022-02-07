@@ -42,7 +42,7 @@ const ConfirmForm = () => {
       p={6}
     >
       <Heading as="h1" mb={6}>
-        Confirm Email
+        Potwierdź adres email
       </Heading>
       {errors.email && (
         <Alert status="error" variant="subtle" mt={6} mb={6}>
@@ -52,8 +52,8 @@ const ConfirmForm = () => {
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input name="email" placeholder="Email" ref={register()} />
+          <FormLabel htmlFor="email">Adres email</FormLabel>
+          <Input name="email" placeholder="jan@kowalski.com" ref={register()} />
           <Button
             mt={4}
             colorScheme="teal"

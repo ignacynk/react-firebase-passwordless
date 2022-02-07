@@ -7,8 +7,8 @@ import ConfirmForm from './components/auth/ConfirmForm';
 import PrivateRoute from './components/route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import NotFound from './components/layout/NotFound';
-import {Test} from './components/form/test/Test'
-import Form2 from './components/form/Form';
+// import {Test} from './components/form/test/Test'
+import Form from './components/form/Form';
 
 function App() {
   return (
@@ -18,15 +18,9 @@ function App() {
           <PrivateRoute exact path="/">
             <Dashboard />
           </PrivateRoute>
-          <PrivateRoute path="/test">
-            <Test />
-          </PrivateRoute>
           <PrivateRoute path='/formularz'>
-            <Form2 />
-          </PrivateRoute>
-          <PrivateRoute path="/test3">
-            <Test />
-          </PrivateRoute>          
+            <Form />
+          </PrivateRoute>         
           <Route path="/login">
             <LoginForm />
           </Route>

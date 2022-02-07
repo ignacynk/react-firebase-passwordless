@@ -14,7 +14,7 @@ const Nav = () => {
           <>
             <Link to="/">
               <Text fontSize="md" mr={8}>
-                Dashboard
+                Panel główny
               </Text>
             </Link>
             <Link to="/formularz">
@@ -22,14 +22,9 @@ const Nav = () => {
                 Formularz
               </Text>
             </Link>
-            <Link to="/form2">
-              <Text fontSize="md" mr={8}>
-                Test
-              </Text>
-            </Link>
             <Box as="button" onClick={logout}>
               <Text fontSize="md" mr={8}>
-                Logout
+                Wyloguj
               </Text>
             </Box>
           </>
@@ -37,12 +32,7 @@ const Nav = () => {
         {!user && (<>
           <Link to="/login">
             <Text fontSize="md" mr={8}>
-              Login
-            </Text>
-          </Link>
-          <Link to="/confirm">
-            <Text fontSize="md" mr={8}>
-              Confirm
+              Zaloguj się
             </Text>
           </Link>
           </>
