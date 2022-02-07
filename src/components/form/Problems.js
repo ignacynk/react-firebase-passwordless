@@ -37,14 +37,14 @@ export const Problems = ({ formProps, path } ) => {
               
               placeholder={pathPlaceholder}
             />
-            <Input
+            {/* <Input
               type="text"
               ref={register({require: true})}
               name={`${pathNameProblems}[${fieldIndex}].id`}
               value={uuidv4()}
               placeholder={pathPlaceholder}
               style={{display: 'none'}}
-            />
+            /> */}
             <InputRightElement width="4.5rem">
               <Button
                 type="button"
