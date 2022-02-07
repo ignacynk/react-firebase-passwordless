@@ -7,8 +7,9 @@ import {
   InputRightElement,
   FormLabel,
 } from '@chakra-ui/react';
+import { v4 as uuidv4 } from 'uuid';
 
-export const Problems = ({ formProps, path } ) => {
+export const Problems = ({ formProps, path }, data, data1 ) => {
   const { control, register } = formProps;
 
   const pathName = path[0]
@@ -20,12 +21,13 @@ export const Problems = ({ formProps, path } ) => {
     control,
     name: `${pathNameProblems}`,
   });
-
-  const appendField = () => append({ [pathNameProblems]: '' });
+  
+  const appendField = () => append({ [pathNameProblems]: '', id: uuidv4() });
   return (
 <>
         <FormLabel mt={6}>{pathTitle}</FormLabel>  
-        {fields.flatMap((field, fieldIndex) => (
+        {fields.map((field, fieldIndex) => (
+          
           <InputGroup key={field.id} mt={4}>
             <Input
               type="text"
@@ -33,6 +35,14 @@ export const Problems = ({ formProps, path } ) => {
               name={`${pathNameProblems}[${fieldIndex}].problem`}
               
               placeholder={pathPlaceholder}
+            />
+            <Input
+              type="text"
+              ref={register({require: true})}
+              name={`${pathNameProblems}[${fieldIndex}].id`}
+              value={uuidv4()}
+              placeholder={pathPlaceholder}
+              style={{display: 'none'}}
             />
             <InputRightElement width="4.5rem">
               <Button
@@ -42,6 +52,7 @@ export const Problems = ({ formProps, path } ) => {
                 size="sm"
                 onClick={() => remove(fieldIndex)}
               >
+                {console.log((data1))}
                 usuń
               </Button>
             </InputRightElement>

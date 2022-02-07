@@ -20,7 +20,7 @@ export const TableTest = ({ data, register, path }) => {
     <>
     {<FormLabel mt={6} mb={6} htmlFor="table-test" textAlign='center'>{pathHeaderTitle}</FormLabel>}
     {data &&
-        data.flatMap(({ problem }, i) => ( 
+        data.map(({ problem, key }, i) => ( 
         <Box p={5} shadow='sm' borderWidth='1px' minWidth='50vw' mb={6} borderRadius='lg'>
             <Stack spacing={8} >
                 <FormLabel>{pathHeaderTitle}</FormLabel>

@@ -15,7 +15,7 @@ export const Problems = ({ formProps, path } ) => {
   const pathTitle = path[1]
   const pathPlaceholder = path[2]
   const pathNameProblems = `${pathName}Problems`
-
+  
   const { fields, append, remove } = useFieldArray({
     control,
     name: `${pathNameProblems}`,
