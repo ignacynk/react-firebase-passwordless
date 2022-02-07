@@ -13,7 +13,7 @@ const Dashboard = () => {
       p={6}
     >
       <Heading as="h1" mb={6}>
-        Panel uzytkownika
+        Panel użytkownika
       </Heading>
       <Text fontSize="lg">Witaj, {user.email}!</Text>
     </GridItem>

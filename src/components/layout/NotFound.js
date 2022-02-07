@@ -9,7 +9,7 @@ const NotFound = () => {
       p={6}
     >
       <Heading as="h1" mb={6}>
-        404: Strona nie została znaleziona
+        Błąd 404: Strona nie została znaleziona
       </Heading>
     </GridItem>
   );

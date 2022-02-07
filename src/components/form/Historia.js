@@ -16,7 +16,7 @@ import {
 export const Historia = ({ register }) => {
   return (
 <>
-    <Heading as="h1" mt={6} mb={12}>
+    <Heading textAlign='center' as="h1" mt={6} mb={12}>
       Historia choroby
     </Heading>
     <FormLabel mt={6} mb={4} htmlFor="email">Historia aktualnej choroby/kontekst/inne istotne informacje:</FormLabel>
