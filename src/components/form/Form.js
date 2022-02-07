@@ -1,5 +1,9 @@
 import React from "react";
+
+// Import hooks for form
 import { useForm } from "react-hook-form";
+
+// Import UI library 
 import { 
   GridItem, 
   Button,
@@ -7,14 +11,17 @@ import {
   Divider
 } from '@chakra-ui/react'
 
+// Import components
 import { Age } from "./Age";
 import { Problems } from "./Problems";
 import { Historia } from "./Historia";
 import { TableTest } from "./TableTest";
 
+// Import texts for components
 import { pathing } from "./pathNames";
+
 export default function Form() {
-  const { control, register, handleSubmit, watch, getValues, formState: { isSubmitting } } = useForm({
+  const { control, register, handleSubmit, watch, formState: { isSubmitting } } = useForm({
     mode: 'onChange',
   });
 
@@ -63,6 +70,3 @@ export default function Form() {
     </GridItem>
   );
 }
-
-//https://react-hook-form.com/api/usewatch
-// https://app.clickup.com/30983863/v/b/6-169062274-2?pr=49110212

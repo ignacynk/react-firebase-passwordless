@@ -46,7 +46,6 @@ export const Problems = ({ formProps, path } ) => {
                 onClick={() => remove(fieldIndex)}
                 tabindex="-1"
               >
-                {/* {console.log((data1))} */}
                 usuń
               </Button>
             </InputRightElement>

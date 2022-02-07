@@ -19,7 +19,7 @@ const pathing = {
     ]
 }
 
-const tableColumnValues = [              // 
+const tableColumnValues = [              
     'Miejsce dolegliwości',
     'Czas trwania',
     'Opis początku (cechy charakterystyczne; nagły/powolny)',
