@@ -36,7 +36,7 @@ const LoginForm = () => {
       p={6}
     >
       <Heading as="h1" mb={6}>
-        Login
+        Logowanie
       </Heading>
       {errors.email && (
         <Alert status="error" variant="subtle" mt={6} mb={6}>
@@ -47,20 +47,20 @@ const LoginForm = () => {
       {formState.isSubmitSuccessful && (
         <Alert status="success" variant="subtle" mt={6} mb={6}>
           <AlertIcon />
-          Check your email to complete login!
+          Sprawdź email z linkiem do logowania!
         </Alert>
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input name="email" placeholder="Email" ref={register()} />
+          <FormLabel htmlFor="email" mb={4}>Adres email</FormLabel>
+          <Input name="email" placeholder="jan@kowalski.com" ref={register()} />
           <Button
-            mt={4}
+            mt={6}
             colorScheme="teal"
             isLoading={formState.isSubmitting}
             type="submit"
           >
-            Submit
+            Zaloguj
           </Button>
         </FormControl>
       </form>

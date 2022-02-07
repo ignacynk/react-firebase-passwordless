@@ -52,6 +52,7 @@ export const Problems = ({ formProps, path } ) => {
                 r="1.75rem"
                 size="sm"
                 onClick={() => remove(fieldIndex)}
+                tabindex="-1"
               >
                 {/* {console.log((data1))} */}
                 usuń
