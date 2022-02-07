@@ -26,8 +26,7 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/test3">
             <Test />
-          </PrivateRoute>
-          
+          </PrivateRoute>          
           <Route path="/login">
             <LoginForm />
           </Route>

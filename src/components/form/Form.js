@@ -10,14 +10,14 @@ import { pathing } from "./pathNames";
 import { TableTest } from "./TableTest";
 
 export default function Form() {
-  const { control, register, handleSubmit, watch,getValues, formState: { isSubmitting } } = useForm({
+  const { control, register, handleSubmit, watch, getValues, formState: { isSubmitting } } = useForm({
     mode: 'onChange',
   });
 
   // https://react-hook-form.com/api/useform/watch
   const formData = watch();
-  const formData1 = getValues()
-  console.log(formData1)
+  // const formData1 = getValues()
+  // console.log(formData1)
 
   function onSubmit(values) {
     return new Promise((resolve) => {
@@ -37,7 +37,7 @@ export default function Form() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Age register={register} />
       <Historia register={register} />
-      <Problems formProps={{ control, register }} path={pathing.main} data={formData} data1={formData1}/>
+      <Problems formProps={{ control, register }} path={pathing.main} data={formData}/>
       <Problems formProps={{ control, register }} path={pathing.actual}/>
       <Problems formProps={{ control, register }} path={pathing.chronic}/>
       <TableTest data={formData.mainProblems} register={register} path={pathing.main}/>

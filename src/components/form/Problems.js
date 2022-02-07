@@ -6,12 +6,13 @@ import {
   InputGroup,
   InputRightElement,
   FormLabel,
+
 } from '@chakra-ui/react';
 import { v4 as uuidv4 } from 'uuid';
 
-export const Problems = ({ formProps, path }, data, data1 ) => {
+export const Problems = ({ formProps, path } ) => {
   const { control, register } = formProps;
-
+  
   const pathName = path[0]
   const pathTitle = path[1]
   const pathPlaceholder = path[2]
@@ -24,11 +25,11 @@ export const Problems = ({ formProps, path }, data, data1 ) => {
   
   const appendField = () => append({ [pathNameProblems]: '', id: uuidv4() });
   return (
-<>
+        <>
         <FormLabel mt={6}>{pathTitle}</FormLabel>  
         {fields.map((field, fieldIndex) => (
-          
           <InputGroup key={field.id} mt={4}>
+                
             <Input
               type="text"
               ref={register({require: true})}
@@ -52,7 +53,7 @@ export const Problems = ({ formProps, path }, data, data1 ) => {
                 size="sm"
                 onClick={() => remove(fieldIndex)}
               >
-                {console.log((data1))}
+                {/* {console.log((data1))} */}
                 usuń
               </Button>
             </InputRightElement>
