@@ -27,14 +27,13 @@ export const Problems = ({ formProps, path } ) => {
   return (
 <>
         <FormLabel mt={6}>{pathTitle}</FormLabel> 
-        {console.log(fields.length)}
+        {/* {console.log(fields.length)} */}
         {fields.map((field, fieldIndex) => (
           <InputGroup key={field.id} mt={4}>     
             <Input
               type="text"
               ref={register({require: true})}
               name={`${pathNameProblems}[${fieldIndex}].problem`}
-              
               placeholder={pathPlaceholder}
             />
             <InputRightElement width="4.5rem">

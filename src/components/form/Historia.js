@@ -22,7 +22,7 @@ export const Historia = ({ register }) => {
     <FormLabel mt={6} mb={4} htmlFor="email">Historia aktualnej choroby/kontekst/inne istotne informacje:</FormLabel>
     {/* <Text fontSize='xs'>To, co tu napiszesz w największym stopniu pomoże SP wczuć się w swoją postać. Postaraj się najbardziej pełnie, kompletnie opisać co działo się od momentu pojawienia się dolegliwości (ew. wcześniej, jeśli coś do nich doprowadziło), poprzez etap podejmowania decyzji o kontakcie z lekarzem do samej rozmowy z lekarzem. Potraktuj to jako instrukcję dla SP, możesz też uwzględnić proponowany sposób wypowiedzi pacjenta.</Text> */}
     <Textarea 
-      name='tx' 
+      name='history'
       type='text'
       minHeight={150}
       placeholder='Wpisz zgodnie z instrukcją aktywowaną pod poniszym przyciskiem' 
