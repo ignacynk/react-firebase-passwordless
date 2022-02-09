@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 
 // Import components
+import { UserInfo } from "./UserInfo"
 import { Age } from "./Age";
 import { Problems } from "./Problems";
 import { Historia } from "./Historia";
@@ -19,6 +20,7 @@ import { TableTest } from "./TableTest";
 
 // Import texts for components
 import { pathing } from "./pathNames";
+
 
 export default function Form() {
   const { control, register, handleSubmit, watch, formState: { isSubmitting } } = useForm({
@@ -58,6 +60,9 @@ export default function Form() {
     colSpan={[3, null, null, 1, null, null]}
     p={6}>
     <form onSubmit={handleSubmit(onSubmit)}>
+      {/* Easy import user's info */}
+      <UserInfo register={register} />
+
       <Age register={register} />
       <Divider mt={12} mb={12}/>
 
