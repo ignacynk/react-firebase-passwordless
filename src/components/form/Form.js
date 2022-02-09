@@ -28,7 +28,7 @@ export default function Form() {
   const formData = watch();
 
   function onSubmit(values) {
-    const postURL = 'https://api-form-connector.konomlopek.repl.co'
+    const postURL = 'https://api-form-connector.konomlopek.repl.co/api/postForm'
     return new Promise((resolve) => {
       setTimeout(() => {
         fetch(postURL, {
