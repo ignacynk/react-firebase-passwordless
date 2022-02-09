@@ -17,6 +17,7 @@ import { Age } from "./Age";
 import { Problems } from "./Problems";
 import { Historia } from "./Historia";
 import { TableTest } from "./TableTest";
+import { Timer } from './Timer'
 
 // Import texts for components
 import { pathing } from "./pathNames";
@@ -62,7 +63,7 @@ export default function Form() {
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* Easy import user's info */}
       <UserInfo register={register} />
-
+      
       <Age register={register} />
       <Divider mt={12} mb={12}/>
 
@@ -79,7 +80,7 @@ export default function Form() {
       <TableTest data={formData.mainProblems} register={register} path={pathing.main}/>
       <TableTest data={formData.actualProblems} register={register} path={pathing.actual}/>
       <TableTest data={formData.chronicProblems} register={register} path={pathing.chronic}/>
-      
+      <Timer register={register} />
       <Button
           mt={4}
           colorScheme="teal"
