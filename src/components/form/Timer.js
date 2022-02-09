@@ -2,19 +2,20 @@ import React from 'react';
 import { useStopwatch } from "react-timer-hook";
 
 import { 
-    FormLabel, 
-    Heading, 
-    Input, 
-    Select 
+    FormLabel,
 } from '@chakra-ui/react'
 
 export const Timer = ({ register }) => {
+    // const stopwatchOffset = new Date();
+    // stopwatchOffset.setSeconds(stopwatchOffset.getSeconds() + 12300);
     const {
       seconds,
       minutes,
       hours,
-    } = useStopwatch({ autoStart: true });
-  
+    } = useStopwatch({ 
+        autoStart: true, 
+        // offsetTimestamp: stopwatchOffset,
+    });
     return (
 <>
         <div style={{position: "fixed", bottom: '1vh', right: '1vw', display: 'inline-flex', zIndex: 1000}}>

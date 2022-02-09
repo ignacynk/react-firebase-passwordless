@@ -14,14 +14,14 @@ const Nav = () => {
           <>
             <Link to="/">
               <Text fontSize="md" mr={8}>
-                Panel główny
+                Panel użytkownika
               </Text>
             </Link>
-            <Link to="/formularz">
+            {/* <Link to="/form">
               <Text fontSize="md" mr={8}>
                 Formularz
               </Text>
-            </Link>
+            </Link> */}
             <Box as="button" onClick={logout}>
               <Text fontSize="md" mr={8}>
                 Wyloguj

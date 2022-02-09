@@ -16,7 +16,7 @@ import { UserInfo } from "./UserInfo"
 import { Age } from "./Age";
 import { Problems } from "./Problems";
 import { Historia } from "./Historia";
-import { TableTest } from "./TableTest";
+import { Table } from "./Table";
 import { Timer } from './Timer'
 
 // Import texts for components
@@ -77,9 +77,9 @@ export default function Form() {
       <Divider mt={12} mb={12}/>
 
       <Heading textAlign='center' as="h1" mt={6} mb={12}>Opisy dolegliwości</Heading>
-      <TableTest data={formData.mainProblems} register={register} path={pathing.main}/>
-      <TableTest data={formData.actualProblems} register={register} path={pathing.actual}/>
-      <TableTest data={formData.chronicProblems} register={register} path={pathing.chronic}/>
+      <Table data={formData.mainProblems} register={register} path={pathing.main}/>
+      <Table data={formData.actualProblems} register={register} path={pathing.actual}/>
+      <Table data={formData.chronicProblems} register={register} path={pathing.chronic}/>
       <Timer register={register} />
       <Button
           mt={4}
