@@ -28,25 +28,25 @@ export default function Form() {
   const formData = watch();
 
   function onSubmit(values) {
-    
+    const postURL = 'https://api-form-connector.konomlopek.repl.co'
     return new Promise((resolve) => {
       setTimeout(() => {
-        fetch('https://mongodb-connection-using-node-js.konomlopek.repl.co/api/postForm', {
-          method: 'POST', // or 'PUT'
+        fetch(postURL, {
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Accept': 'text/html',
           },
           body: JSON.stringify(values),
         })
         .then(response => response.json())
         .then(data => {
-          console.log('Success:', values);
+          console.log('Success!');
         })
         .catch((error) => {
-          console.error('Error:', values);
+          console.error('Error!');
         });
-        console.log(JSON.stringify(values, null, 2));
-        
+        // console.log(JSON.stringify(values, null, 2));
         resolve();
       }, 3000);
     });
