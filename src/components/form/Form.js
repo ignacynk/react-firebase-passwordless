@@ -28,9 +28,25 @@ export default function Form() {
   const formData = watch();
 
   function onSubmit(values) {
+    
     return new Promise((resolve) => {
       setTimeout(() => {
+        fetch('https://mongodb-connection-using-node-js.konomlopek.repl.co/api/postForm', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', values);
+        })
+        .catch((error) => {
+          console.error('Error:', values);
+        });
         console.log(JSON.stringify(values, null, 2));
+        
         resolve();
       }, 3000);
     });

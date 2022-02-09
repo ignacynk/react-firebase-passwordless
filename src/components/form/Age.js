@@ -24,8 +24,8 @@ import {
     <FormLabel mt={6} mb={4} htmlFor="gender">Płeć</FormLabel>
     <Select placeholder='Wybierz płeć' name="patientInfo.gender" ref={register({ required: true })}>
         <option value='kobieta'>Kobieta</option>
-        <option value='mezczyzna'>Mężczyzna</option>
-        <option value='mezczyzna'>Inne</option>
+        <option value='mężczyzna'>Mężczyzna</option>
+        <option value='Inna'>Inna</option>
     </Select>
 
     {/* Main Emotion */}
