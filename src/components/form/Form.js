@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, {useState} from "react";
+import { useHistory } from "react-router-dom"
 // Import hooks for form
 import { useForm } from "react-hook-form";
 
@@ -27,14 +27,14 @@ export default function Form() {
   const { control, register, handleSubmit, watch, formState: { isSubmitting } } = useForm({
     mode: 'onChange',
   });
-
+  let history = useHistory()
   const formData = watch();
 
   function onSubmit(values) {
     const postURL = 'https://api-form-connector.konomlopek.repl.co/api/postForm'
     return new Promise((resolve) => {
       setTimeout(() => {
-        fetch(postURL, {
+        fetch( postURL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -50,12 +50,13 @@ export default function Form() {
           console.error('Error!');
         });
         // console.log(JSON.stringify(values, null, 2));
-        resolve();
+        resolve(history.push("/"));
       }, 3000);
     });
   }
 
   return (
+    
     <GridItem
     colStart={[1, null, null, 2, null, null]}
     colSpan={[3, null, null, 1, null, null]}

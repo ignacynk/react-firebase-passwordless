@@ -4,7 +4,7 @@ import { Heading, GridItem, Text, Center } from '@chakra-ui/react';
 import { useAuth } from '../../hooks/useAuth';
 
 import { AddButtonForm } from './AddButtonForm'
-import { UserTable } from './UserTable';
+import UserTable from './UserTable';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -28,5 +28,4 @@ const Dashboard = () => {
     </GridItem>
   );
 };
-
 export default Dashboard;

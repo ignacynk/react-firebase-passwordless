@@ -7,7 +7,7 @@ export const UserInfo = ({ register }) => {
 
   return <>
     <input 
-        name='formInfo.user'
+        name='userID'
         defaultValue={user.email} 
         ref={register} 
         style={{display: "none"}}

@@ -1,38 +1,54 @@
-import React from 'react';
-import {
-    Table,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    Box,
-  } from '@chakra-ui/react'
-  
+import React, { useState, useEffect } from "react";
 
-  export const UserTable = () => {
-  return <>
+import axios from "axios";
+import { useAuth } from '../../hooks/useAuth';
+
+import {
+  Table,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Box,
+} from '@chakra-ui/react'
+
+export default function UserTable () {
+  let [userData, setUsersData] = useState([]);
+
+  const { user } = useAuth();
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api-form-connector.konomlopek.repl.co/api/user/${user.email}`
+      )
+      .then((response) => setUsersData(response.data));
+  }, []);
+
+  return (<>
    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' mt={6}>
     <Table variant='simple'>
         <Tbody>
             <Tr>
                 <Th>Ilość formularzy</Th>
-                <Td textAlign='center'>34 szt.</Td>
+                <Td textAlign='center'>{userData.count}</Td>
             </Tr>
             <Tr>
                 <Th>Łączny czas</Th>
-                <Td textAlign='center'>23:03h</Td>
+                <Td textAlign='center'>{userData.time}h</Td>
             </Tr>
             <Tr>
                 <Th>Czas / formularz</Th>
-                <Td textAlign='center'>43:03min</Td>
+                <Td textAlign='center'>{userData.timeForm}min</Td>
             </Tr>
         </Tbody>
     </Table>
     </Box>
+    {/* <div className="App">
+      <h2>The JSON below is loaded from an external API!</h2>
+      <code>{users.time}</code>
+    </div> */}
     </>
+  );
 }
-
-
-
-
 
