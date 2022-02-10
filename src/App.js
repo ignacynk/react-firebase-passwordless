@@ -11,6 +11,7 @@ import Form from './components/form/Form';
 // import AddNewForm from './components/forms-panel/Dashboard';
 
 function App() {
+
   return (
     <Router>
       <Layout>
@@ -20,7 +21,7 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path='/form'>
             <Form />
-          </PrivateRoute>         
+          </PrivateRoute>       
           <Route path="/login">
             <LoginForm />
           </Route>

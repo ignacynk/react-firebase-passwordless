@@ -1,5 +1,7 @@
 import React, {useState} from "react";
+// 
 import { useHistory } from "react-router-dom"
+
 // Import hooks for form
 import { useForm } from "react-hook-form";
 
@@ -17,8 +19,8 @@ import { Age } from "./Age";
 import { Problems } from "./Problems";
 import { Historia } from "./Historia";
 import { Table } from "./Table";
-import { Timer } from './Timer'
-
+import { Timer } from './Timer';
+import { Instruction } from "./Instruction";
 // Import texts for components
 import { pathing } from "./pathNames";
 
@@ -27,7 +29,10 @@ export default function Form() {
   const { control, register, handleSubmit, watch, formState: { isSubmitting } } = useForm({
     mode: 'onChange',
   });
+  // Redirecting from RRD
   let history = useHistory()
+
+  // Watch live input datas
   const formData = watch();
 
   function onSubmit(values) {
@@ -64,6 +69,9 @@ export default function Form() {
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* Easy import user's info */}
       <UserInfo register={register} />
+
+      <Instruction />
+      <Divider mt={12} mb={12}/>
       
       <Age register={register} />
       <Divider mt={12} mb={12}/>
@@ -82,9 +90,10 @@ export default function Form() {
       <Table data={formData.actualProblems} register={register} path={pathing.actual}/>
       <Table data={formData.chronicProblems} register={register} path={pathing.chronic}/>
       <Timer register={register} />
+      
       <Button
-          mt={4}
-          colorScheme="teal"
+          // mt={4}
+          // colorScheme="teal"
           type="submit"
           isLoading={isSubmitting}>
           Wyślij
