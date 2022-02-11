@@ -21,10 +21,8 @@ export default function UserTable () {
     axios
       .get(
         `https://medsi-api.ink2000.repl.co/api/user/dashboard-table/${user.email}`,{
-        auth: {
-          username: 'medsi',
-          password: 'uNfaxM27NBKj6jHW',
-        }},
+        
+      },
       )
       .then((response) => setUsersData(response.data));
       
