@@ -39,21 +39,29 @@ export default function Form() {
 
   function onSubmit(values) {
     return new Promise((resolve) => {
+      const postURL = 'https://api-form-connector.konomlopek.repl.co/api/postForm'
       setTimeout(() => {
-        axios({
-        method: 'post',
-        url: 'https://api-form-connector.konomlopek.repl.co/api/postForm',
-        auth: {
-          username: 'medsi',
-          password: 'uNfaxM27NBKj6jHW',    
-        },
-        headers:{
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
-        },
-          data: values
-      },
-      ) 
+      //   axios({
+      //     method: 'post',
+      //     url: 'https://api-form-connector.konomlopek.repl.co/api/postForm',
+      //     auth: {
+      //       username: 'medsi',
+      //       password: 'uNfaxM27NBKj6jHW',    
+      //     },
+      //     headers:{
+      //       'Content-Type': 'application/json',         
+      //     },
+      //     data: JSON.stringify(values)
+      // })
+              fetch( postURL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'text/html',
+            
+          },
+          body: JSON.stringify(values),
+        }) 
         .then(response => response.json())
         .then(data => {
           console.log('Success!');
