@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 
 // Import hooks for form
 import { useForm } from "react-hook-form";
-import axios from "axios";
+// import axios from "axios";
 // Import UI library 
 import { 
   GridItem, 
@@ -36,33 +36,33 @@ export default function Form() {
   // Watch live input datas
   const formData = watch();
   console.log(JSON.stringify(formData))
-  // const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
+  const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
   function onSubmit(values) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        axios({
-          method: 'post',
-          url: 'https://medsi-api.ink2000.repl.co/Api/PostForm',
-          // auth: {
-          //   username: 'medsi',
-          //   password: 'uNfaxM27NBKj6jHW',    
-          // },
-          headers:{
-            'Content-Type': 'application/json',         
+      //   axios({
+      //     method: 'post',
+      //     url: 'https://medsi-api.ink2000.repl.co/Api/PostForm',
+      //     // auth: {
+      //     //   username: 'medsi',
+      //     //   password: 'uNfaxM27NBKj6jHW',    
+      //     // },
+      //     headers:{
+      //       'Content-Type': 'application/json',         
+      //     },
+      //     data: JSON.stringify(values)
+      // })
+      // .catch(function (error) {
+      //   console.log(error.toJSON());
+      // })
+        fetch( postURL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'text/html',
           },
-          data: JSON.stringify(values)
-      })
-      .catch(function (error) {
-        console.log(error.toJSON());
-      })
-        // fetch( postURL, {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //     'Accept': 'text/html',
-        //   },
-        //   body: JSON.stringify(values),
-        // })
+          body: JSON.stringify(values),
+        })
         .then(response => response.json())
         .then(data => {
           console.log('Success!');
