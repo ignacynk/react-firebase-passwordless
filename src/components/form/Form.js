@@ -36,32 +36,33 @@ export default function Form() {
   // Watch live input datas
   const formData = watch();
   console.log(JSON.stringify(formData))
-
+  // const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
   function onSubmit(values) {
     return new Promise((resolve) => {
-      const postURL = 'https://api-form-connector.konomlopek.repl.co/api/postForm'
       setTimeout(() => {
-      //   axios({
-      //     method: 'post',
-      //     url: 'https://api-form-connector.konomlopek.repl.co/api/postForm',
-      //     auth: {
-      //       username: 'medsi',
-      //       password: 'uNfaxM27NBKj6jHW',    
-      //     },
-      //     headers:{
-      //       'Content-Type': 'application/json',         
-      //     },
-      //     data: JSON.stringify(values)
-      // })
-              fetch( postURL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'text/html',
-            
+        axios({
+          method: 'post',
+          url: 'https://medsi-api.ink2000.repl.co/Api/PostForm',
+          auth: {
+            username: 'medsi',
+            password: 'uNfaxM27NBKj6jHW',    
           },
-          body: JSON.stringify(values),
-        }) 
+          headers:{
+            'Content-Type': 'application/json',         
+          },
+          data: JSON.stringify(values)
+      })
+      .catch(function (error) {
+        console.log(error.toJSON());
+      })
+        // fetch( postURL, {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'Accept': 'text/html',
+        //   },
+        //   body: JSON.stringify(values),
+        // })
         .then(response => response.json())
         .then(data => {
           console.log('Success!');
