@@ -9,7 +9,6 @@ import {
     ModalCloseButton,
     useDisclosure,
     Button,
-    FormControl,
     FormLabel,
     Input
   } from '@chakra-ui/react'
@@ -53,5 +52,3 @@ export const NumberVariant = ({ register }) => {
         </>
     )
     }
-
-

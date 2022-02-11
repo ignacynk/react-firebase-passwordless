@@ -19,8 +19,14 @@ const Dashboard = () => {
           <Heading as="h1" mb={6}>
             Panel użytkownika
           </Heading>
-          <Text fontSize="lg" mb={10}>Witaj, {user.email}!</Text> 
+        </Center>
+        <Center>
+          <Text fontSize="lg" mb={10}>Witaj, {user.email}!</Text>
+        </Center>
+        <Center>
       <AddButtonForm />
+      </Center>
+      <Center>
       <UserTable />
       </Center>
     </GridItem>
