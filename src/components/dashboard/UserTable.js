@@ -20,9 +20,14 @@ export default function UserTable () {
   useEffect(() => {
     axios
       .get(
-        `https://api-form-connector.konomlopek.repl.co/api/user/${user.email}`
+        `https://medsi-api.ink2000.repl.co/api/user/dashboard-table/${user.email}`,{
+        auth: {
+          username: 'medsi',
+          password: 'uNfaxM27NBKj6jHW',
+        }},
       )
       .then((response) => setUsersData(response.data));
+      
   }, []);
 
   return (<>

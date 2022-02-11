@@ -21,6 +21,7 @@ import { Historia } from "./Historia";
 import { Table } from "./Table";
 import { Timer } from './Timer';
 import { Instruction } from "./Instruction";
+import { NumberVariant } from "./NumberVariant";
 // Import texts for components
 import { pathing } from "./pathNames";
 
@@ -34,6 +35,7 @@ export default function Form() {
 
   // Watch live input datas
   const formData = watch();
+  console.log(JSON.stringify(formData))
 
   function onSubmit(values) {
     const postURL = 'https://api-form-connector.konomlopek.repl.co/api/postForm'
@@ -71,8 +73,9 @@ export default function Form() {
       <UserInfo register={register} />
 
       <Instruction />
+      <NumberVariant register={register}/>
       <Divider mt={12} mb={12}/>
-      
+
       <Age register={register} />
       <Divider mt={12} mb={12}/>
 

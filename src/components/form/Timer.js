@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 
 export const Timer = ({ register }) => {
+    // TEST TIMER WITH RANDOM STARTING TIMER VALUE
     // const stopwatchOffset = new Date();
     // stopwatchOffset.setSeconds(stopwatchOffset.getSeconds() + 12300);
     const {
@@ -13,7 +14,8 @@ export const Timer = ({ register }) => {
       minutes,
       hours,
     } = useStopwatch({ 
-        autoStart: true, 
+        autoStart: true,
+        // TEST TIMER - LOOK ABOVE
         // offsetTimestamp: stopwatchOffset,
     });
     return (
