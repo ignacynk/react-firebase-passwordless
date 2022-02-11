@@ -30,7 +30,7 @@ export const NumberVariant = ({ register }) => {
                     Numer formularza
                 </FormLabel>
                 <Input 
-                    name='info.number' 
+                    name='formNumber' 
                     type='text' 
                     placeholder='Podaj numer do zmiany' 
                     ref={register({ required: true, maxLength: 80 })} 
@@ -39,7 +39,7 @@ export const NumberVariant = ({ register }) => {
                     Wariant formularza
                 </FormLabel>
                 <Input 
-                    name='info.variant' 
+                    name='variant' 
                     type='text' 
                     placeholder='Podaj wiek pacjenta' 
                     ref={register({ required: true, maxLength: 80 })} 

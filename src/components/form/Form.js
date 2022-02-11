@@ -35,26 +35,13 @@ export default function Form() {
 
   // Watch live input datas
   const formData = watch();
-  console.log(JSON.stringify(formData))
+  // console.log(JSON.stringify(formData))
+
+  // API URL to post form   
   const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
   function onSubmit(values) {
     return new Promise((resolve) => {
       setTimeout(() => {
-      //   axios({
-      //     method: 'post',
-      //     url: 'https://medsi-api.ink2000.repl.co/Api/PostForm',
-      //     // auth: {
-      //     //   username: 'medsi',
-      //     //   password: 'uNfaxM27NBKj6jHW',    
-      //     // },
-      //     headers:{
-      //       'Content-Type': 'application/json',         
-      //     },
-      //     data: JSON.stringify(values)
-      // })
-      // .catch(function (error) {
-      //   console.log(error.toJSON());
-      // })
         fetch( postURL, {
           method: 'POST',
           headers: {

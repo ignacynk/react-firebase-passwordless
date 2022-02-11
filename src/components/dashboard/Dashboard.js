@@ -19,12 +19,10 @@ const Dashboard = () => {
           <Heading as="h1" mb={6}>
             Panel użytkownika
           </Heading>
-        </Center>
-        <Center>
-          <Text fontSize="lg" mb={10}>Witaj, {user.email}!</Text>
-        </Center>
+          <Text fontSize="lg" mb={10}>Witaj, {user.email}!</Text> 
       <AddButtonForm />
       <UserTable />
+      </Center>
     </GridItem>
   );
 };
