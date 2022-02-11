@@ -43,10 +43,10 @@ export default function Form() {
         axios({
           method: 'post',
           url: 'https://medsi-api.ink2000.repl.co/Api/PostForm',
-          auth: {
-            username: 'medsi',
-            password: 'uNfaxM27NBKj6jHW',    
-          },
+          // auth: {
+          //   username: 'medsi',
+          //   password: 'uNfaxM27NBKj6jHW',    
+          // },
           headers:{
             'Content-Type': 'application/json',         
           },
