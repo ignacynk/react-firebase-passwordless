@@ -6,14 +6,14 @@ import {
   Popover, 
   PopoverTrigger,
   Button,
-  PopoverContent,
+  PopoverContent, 
   PopoverArrow,
   PopoverCloseButton,
   PopoverHeader,
   PopoverBody
 } from '@chakra-ui/react'
 
-export const Historia = ({ register }) => {
+export const History = ({ register }) => {    
   return (
 <>
     <Heading textAlign='center' as="h1" mt={6} mb={12}>
@@ -26,7 +26,7 @@ export const Historia = ({ register }) => {
       type='text'
       minHeight={150}
       placeholder='Wpisz zgodnie z instrukcją aktywowaną pod poniszym przyciskiem' 
-      ref={register({ required: true, minLength: 10 })} 
+      ref={register({ required: true })} 
     />
     <Popover mt={4}>
     <PopoverTrigger>
@@ -38,7 +38,7 @@ export const Historia = ({ register }) => {
       <PopoverHeader>Krótka, przejrzysta i treściwa instrukcja</PopoverHeader>
       <PopoverBody>To, co tu napiszesz w największym stopniu pomoże SP wczuć się w swoją postać. Postaraj się najbardziej pełnie, kompletnie opisać co działo się od momentu pojawienia się dolegliwości (ew. wcześniej, jeśli coś do nich doprowadziło), poprzez etap podejmowania decyzji o kontakcie z lekarzem do samej rozmowy z lekarzem. Potraktuj to jako instrukcję dla SP, możesz też uwzględnić proponowany sposób wypowiedzi pacjenta.</PopoverBody>
     </PopoverContent>
-  </Popover>
+  </Popover> 
 </>
   )
 }

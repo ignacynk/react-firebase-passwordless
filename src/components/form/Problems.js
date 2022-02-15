@@ -23,7 +23,7 @@ export const Problems = ({ formProps, path } ) => {
     name: `${pathNameProblems}`,
   });
   
-  const appendField = () => append({ [pathNameProblems]: '', id: uuidv4() });
+  const appendField = () => append({ [pathNameProblems]: '' });
   return (
 <>
         <FormLabel mt={6}>{pathTitle}</FormLabel> 

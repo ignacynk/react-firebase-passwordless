@@ -17,13 +17,21 @@ import {
 import { UserInfo } from "./UserInfo"
 import { Age } from "./Age";
 import { Problems } from "./Problems";
-import { Historia } from "./Historia";
+import { History } from "./History";
 import { Table } from "./Table";
 import { Timer } from './Timer';
 import { Instruction } from "./Instruction";
-import { NumberVariant } from "./NumberVariant";
+import { ReasonVisit } from "./ReasonVisit"
+import { MedicalHistory } from "./MedicalHistory";
+import { ContextSocial } from "./ContextSocial";
+import { PatientsPerspective } from "./PatientsPerspective";
+import { TipsForSP } from "./TipsForSP";
+import { Diagnosis } from "./Diagnosis";
+import { RestActualProblems } from "./RestActualProblems"
 // Import texts for components
 import { pathing } from "./pathNames";
+
+
 
 
 export default function Form() {
@@ -35,7 +43,7 @@ export default function Form() {
 
   // Watch live input datas
   const formData = watch();
-  // console.log(JSON.stringify(formData))
+  console.log(JSON.stringify(formData))
 
   // API URL to post form   
   const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
@@ -57,7 +65,7 @@ export default function Form() {
         .catch((error) => {
           console.error('Error!');
         });
-        // console.log(JSON.stringify(values, null, 2));
+        console.log(JSON.stringify(values, null, 2));
         resolve(history.push("/"));
       }, 3000);
     });
@@ -74,7 +82,6 @@ export default function Form() {
       <UserInfo register={register} />
 
       <Instruction />
-      <NumberVariant register={register}/>
       <Divider mt={12} mb={12}/>
 
       <Age register={register} />
@@ -86,13 +93,36 @@ export default function Form() {
       <Problems formProps={{ control, register }} path={pathing.chronic}/>
       <Divider mt={12} mb={12}/>
       
-      <Historia register={register} />
+      <History register={register} />
       <Divider mt={12} mb={12}/>
+
+      <ReasonVisit register={register} />
+      <Divider mt={12} mb={12} />
 
       <Heading textAlign='center' as="h1" mt={6} mb={12}>Opisy dolegliwości</Heading>
       <Table data={formData.mainProblems} register={register} path={pathing.main}/>
       <Table data={formData.actualProblems} register={register} path={pathing.actual}/>
       <Table data={formData.chronicProblems} register={register} path={pathing.chronic}/>
+      <Divider mt={12} mb={12}/>
+
+      <RestActualProblems register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <MedicalHistory register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <ContextSocial register={register} />
+      <Divider mt={12} mb={12}/>
+      
+      <PatientsPerspective register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <TipsForSP register={register} />
+      <Divider mt={12} mb={12}/>
+
+      <Diagnosis register={register} />
+      <Divider mt={12} mb={12}/>
+
       <Timer register={register} />
       
       <Button

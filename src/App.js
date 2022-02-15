@@ -8,6 +8,7 @@ import PrivateRoute from './components/route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import NotFound from './components/layout/NotFound';
 import Form from './components/form/Form';
+import { GetForm } from './components/get-form/GetForm'
 // import AddNewForm from './components/forms-panel/Dashboard';
 
 function App() {
@@ -21,7 +22,10 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path='/form'>
             <Form />
-          </PrivateRoute>       
+          </PrivateRoute>
+          <PrivateRoute path='/get-form'>
+            <GetForm />
+          </PrivateRoute>     
           <Route path="/login">
             <LoginForm />
           </Route>

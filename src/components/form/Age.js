@@ -3,7 +3,7 @@ import {
     FormLabel, 
     Heading, 
     Input, 
-    Select 
+    Select,
 } from '@chakra-ui/react'
 
   export const Age = ({ register }) => {
@@ -14,7 +14,9 @@ import {
 
     {/* Age */}
     <FormLabel mt={6} mb={4} htmlFor="age">Podaj wiek</FormLabel>
-    <Input 
+    <Input
+        min={1}
+        max={122}
         name='patientInfo.age' 
         type='text' 
         placeholder='Podaj wiek pacjenta' 
