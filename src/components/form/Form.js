@@ -44,7 +44,7 @@ export default function Form() {
 
   // Watch live input datas
   const formData = watch();
-  console.log(JSON.stringify(formData))
+  // console.log(JSON.stringify(formData))
 
   // API URL to post form   
   const postURL = 'https://medsi-api.ink2000.repl.co/Api/PostForm'
