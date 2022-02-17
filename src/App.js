@@ -9,6 +9,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import NotFound from './components/layout/NotFound';
 import Form from './components/form/Form';
 import { GetForm } from './components/get-form/GetForm'
+import { SPView } from './components/sp-view/SPView'
 // import AddNewForm from './components/forms-panel/Dashboard';
 
 function App() {
@@ -25,7 +26,10 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path='/get-form'>
             <GetForm />
-          </PrivateRoute>     
+          </PrivateRoute>
+          <PrivateRoute path='/sp-view'>
+            <SPView />
+          </PrivateRoute>      
           <Route path="/login">
             <LoginForm />
           </Route>

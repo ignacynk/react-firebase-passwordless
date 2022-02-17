@@ -1,0 +1,99 @@
+{
+    "userID": "ignacy.nkonopka@gmail.com",
+    "number": "32",
+    "variant": "1",
+    "nameForms": "siema elo?",
+    "patientInfo": {
+      "age": "32",
+      "gender": "kobieta",
+      "mainEmotion": "niepokój"
+    },
+    "history": "asdadsnj",
+    "reasonVisit": "njknj",
+    "restActualProblems": "jknjn",
+    "otherProblems": "kjnk",
+    "medicalHistory": {
+      "chronicDisease": "jnk",
+      "operation": "jnk",
+      "gynecologist": "jnk",
+      "allergies": "jnk",
+      "drugs": "jnkjnk",
+      "familyProblems": "jnk"
+    },
+    "contextSocial": "n",
+    "patientsPerspective": {
+      "conviction": "jknjnk",
+      "worries": "jn",
+      "expectations": "jkn",
+      "influence": "jkn"
+    },
+    "tipsForSP": "jn",
+    "diagnosis": "jn",
+    "time": {
+      "seconds": "44",
+      "minutes": "1",
+      "hours": "0"
+    },
+    "table": {
+      "mainProblem": [
+        {
+          "problem": "das",
+          "czasTrawania": "jkn",
+          "opisPoczatkowy": "jkn",
+          "przebiegWCzasie": "jknjkn",
+          "opisCharakteru": "jkn",
+          "promieniowanie": "jkn",
+          "czynnikiNasilajace": "jkn",
+          "czynnikiLagodzace": "jkn",
+          "nasilenie": "n",
+          "dotychczasoweLeczenie": "jnkkj",
+          "jakPacjentOpisze": "njkn"
+        }
+      ],
+      "actualProblem": [
+        {
+          "problem": "dadsa",
+          "czasTrawania": "jkn",
+          "opisPoczatkowy": "jnk",
+          "przebiegWCzasie": "jnk",
+          "opisCharakteru": "jnkjn",
+          "promieniowanie": "kjk",
+          "czynnikiNasilajace": "n",
+          "czynnikiLagodzace": "jnkj",
+          "nasilenie": "nkjkn",
+          "dotychczasoweLeczenie": "jnk",
+          "jakPacjentOpisze": "jnk"
+        }
+      ],
+      "chronicProblem": [
+        {
+          "problem": "dasdsads",
+          "czasTrawania": "jnk",
+          "opisPoczatkowy": "jnk",
+          "przebiegWCzasie": "jn",
+          "opisCharakteru": "jknj",
+          "promieniowanie": "knjn",
+          "czynnikiNasilajace": "kjnk",
+          "czynnikiLagodzace": "jkn",
+          "nasilenie": "jn",
+          "dotychczasoweLeczenie": "jn",
+          "jakPacjentOpisze": "jkn"
+        }
+      ]
+    },
+    "mainProblems": [
+      {
+        "problem": "das"
+      }
+    ],
+    "actualProblems": [
+      {
+        "problem": "dadsa"
+      }
+    ],
+    "chronicProblems": [
+      {
+        "problem": "dasdsads"
+      }
+    ]
+  }

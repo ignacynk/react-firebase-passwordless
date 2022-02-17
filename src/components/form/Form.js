@@ -1,10 +1,11 @@
 import React from "react";
-// 
+
+// Redirecting
 import { useHistory } from "react-router-dom"
 
 // Import hooks for form
 import { useForm } from "react-hook-form";
-// import axios from "axios";
+
 // Import UI library 
 import { 
   GridItem, 
@@ -29,11 +30,10 @@ import { TipsForSP } from "./TipsForSP";
 import { Diagnosis } from "./Diagnosis";
 import { RestActualProblems } from "./RestActualProblems";
 import { NumberVariant } from './NumberVariant'
+// import { SubmitingButton } from './SubmitingButton'
+
 // Import texts for components
 import { pathing } from "./pathNames";
-
-
-
 
 export default function Form() {
   const { control, register, handleSubmit, watch, formState: { isSubmitting } } = useForm({
@@ -128,10 +128,10 @@ export default function Form() {
       <Divider mt={12} mb={12}/>
 
       <Timer register={register} />
-      
+
       <Button
           // mt={4}
-          // colorScheme="teal"
+          colorScheme="teal"
           type="submit"
           isLoading={isSubmitting}>
           Wyślij

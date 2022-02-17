@@ -16,7 +16,7 @@ import {
     <Input
         min={1}
         max={2000}
-        name='number' 
+        name='form.number' 
         type='number' 
         placeholder='Wpisz numer scenariusza' 
         ref={register({ required: true, maxLength: 80 })}  /> 
@@ -26,7 +26,7 @@ import {
         min={1}
         max={20}
         defaultValue={1}
-        name='variant' 
+        name='form.variant' 
         type='number'
         placeholder='' 
         ref={register({ required: true, maxLength: 80 })} 
@@ -36,7 +36,7 @@ import {
     <Input
         min={1}
         max={20}
-        name='nameForms' 
+        name='form.name' 
         type='text'
         placeholder='Podaj nazwe formularza' 
         ref={register({ required: true, maxLength: 80 })} 
