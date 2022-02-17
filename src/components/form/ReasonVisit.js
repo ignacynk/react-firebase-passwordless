@@ -3,6 +3,7 @@ import {
   FormLabel, 
   Heading, 
   Textarea,
+  Text
 } from '@chakra-ui/react'
 
 export const ReasonVisit = ({ register }) => {    

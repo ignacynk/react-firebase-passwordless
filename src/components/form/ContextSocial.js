@@ -18,7 +18,7 @@ export const ContextSocial = ({ register }) => {
       type='text'
       minHeight={150}
       placeholder='Wpisz odpowiedź' 
-      ref={register({ required: true, minLength: 10 })} 
+      ref={register()} 
     /> 
 </>
   )

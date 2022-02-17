@@ -27,7 +27,8 @@ import { ContextSocial } from "./ContextSocial";
 import { PatientsPerspective } from "./PatientsPerspective";
 import { TipsForSP } from "./TipsForSP";
 import { Diagnosis } from "./Diagnosis";
-import { RestActualProblems } from "./RestActualProblems"
+import { RestActualProblems } from "./RestActualProblems";
+import { NumberVariant } from './NumberVariant'
 // Import texts for components
 import { pathing } from "./pathNames";
 
@@ -84,6 +85,9 @@ export default function Form() {
       <Instruction />
       <Divider mt={12} mb={12}/>
 
+      <NumberVariant register={register} />
+      <Divider mt={12} mb={12}/>
+      
       <Age register={register} />
       <Divider mt={12} mb={12}/>
 

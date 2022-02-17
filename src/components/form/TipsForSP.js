@@ -17,7 +17,7 @@ export const TipsForSP = ({ register }) => {
       name='tipsForSP'
       type='text'
       placeholder='np. sposób mówienia, duszność, etc.' 
-      ref={register({ required: true})} 
+      ref={register()} 
     /> 
 </>
   )

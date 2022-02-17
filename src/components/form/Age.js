@@ -18,7 +18,7 @@ import {
         min={1}
         max={122}
         name='patientInfo.age' 
-        type='text' 
+        type='number' 
         placeholder='Podaj wiek pacjenta' 
         ref={register({ required: true, maxLength: 80 })} /> 
 
@@ -32,12 +32,19 @@ import {
 
     {/* Main Emotion */}
     <FormLabel mt={6} mb={4} htmlFor="mainEmotion">Dominujące emocje/nastawienie</FormLabel>
-    <Input 
+    {/* <Input 
         name='patientInfo.mainEmotion' 
         type='text' 
         placeholder='np. neutralny, zaniepokojony, zirytowany, etc.' 
         ref={register({ required: true, maxLength: 80 })} 
-    /> 
+    />  */}
+    <Select placeholder='Wybierz z listy' name="patientInfo.mainEmotion" ref={register({ required: true })}>
+        <option value='neutralny'>Neutralny</option>
+        <option value='niepokój'>Niepokój</option>
+        <option value='irytacja'>Irytacja</option>
+        <option value='agresja'>Agresja</option>
+        <option value='przygnębienie'>Przygnębienie</option>
+    </Select>
     </>
 }
 

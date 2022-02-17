@@ -2,7 +2,8 @@ import React from 'react';
 import { 
     FormLabel, 
     Heading, 
-    Input, 
+    Input,
+    Textarea
 } from '@chakra-ui/react'
 
   export const MedicalHistory = ({ register }) => {
@@ -13,7 +14,7 @@ import {
 
     {/* Przewlekłe choroby */}
     <FormLabel mt={6} mb={4} htmlFor="przewlekleChoroby">Przewlekłe choroby i przyjmowane leki, czy pacjent pod opieką poradni</FormLabel>
-    <Input
+    <Textarea
         min={1}
         max={122}
         name='medicalHistory.chronicDisease' 
@@ -63,7 +64,7 @@ import {
 
     {/* Wywiad rodzinny (choroby w rodzinie) */}   
     <FormLabel mt={6} mb={4} htmlFor="przewlekleChoroby">Wywiad rodzinny (choroby w rodzinie)</FormLabel>
-    <Input
+    <Textarea
         min={1}
         max={122}
         name='medicalHistory.familyProblems' 

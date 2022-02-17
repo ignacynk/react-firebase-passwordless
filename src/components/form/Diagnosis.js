@@ -16,7 +16,7 @@ export const Diagnosis = ({ register }) => {
       name='diagnosis'
       type='text'
       placeholder='Jeśli więcej niz jedno prosze wpisać po przecinku' 
-      ref={register({ required: true})} 
+      ref={register({ required: true })} 
     /> 
 </>
   )

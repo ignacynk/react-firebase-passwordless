@@ -21,7 +21,7 @@ import {
         name='patientsPerspective.conviction' 
         type='text' 
         placeholder='Wpisz odpowiedź' 
-        ref={register({ required: true })} /> 
+        ref={register()} /> 
 
     {/* Obawy */}
     <FormLabel mt={6} mb={4} htmlFor="patientsPerspective">Obawy (emocje, wynikające z przekonań)</FormLabel>
@@ -31,7 +31,7 @@ import {
         name='patientsPerspective.worries' 
         type='text' 
         placeholder='Wpisz odpowiedź' 
-        ref={register({ required: true })} /> 
+        ref={register()} /> 
 
     {/* Oczekiwania */}   
     <FormLabel mt={6} mb={4} htmlFor="patientsPerspective">Oczekiwania (wobec lekarza)</FormLabel>
@@ -51,7 +51,7 @@ import {
         name='patientsPerspective.influence' 
         type='text' 
         placeholder='Wpisz odpowiedź' 
-        ref={register({ required: true })} /> 
+        ref={register()} /> 
 
     </>
 }
